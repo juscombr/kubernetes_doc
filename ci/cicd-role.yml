@@ -4,6 +4,15 @@ metadata:
   name: cicd
   namespace: default
 rules:
-  - apiGroups: ["", "apps", "batch", "extensions"]
-    resources: ["deployments", "services", "replicasets", "pods", "jobs", "cronjobs"]
+  - apiGroups: ["", "apps", "batch", "extensions", "autoscaling"]
+    resources:
+      [
+        "deployments",
+        "services",
+        "replicasets",
+        "pods",
+        "jobs",
+        "cronjobs",
+        "horizontalpodautoscalers",
+      ]
     verbs: ["*"]
